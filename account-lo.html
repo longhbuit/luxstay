@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LuxStay – Account Page (Low‑Fi Wireframe)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+<!-- Header -->
+<header class="border-b p-4 flex justify-between items-center">
+  <div class="bg-gray-300 w-10 h-10 flex items-center justify-center">Logo</div>
+  <nav class="hidden md:flex gap-6 text-sm">
+    <span>[Trang chủ]</span>
+    <span>[Tìm kiếm]</span>
+    <span>[Thông báo]</span>
+  </nav>
+  <div class="hidden md:flex gap-2">
+    <span class="bg-gray-200 px-3 py-1 rounded">[Tên tài khoản]</span>
+  </div>
+  <button class="md:hidden bg-gray-200 p-2">☰</button>
+</header>
+
+<!-- Account Overview -->
+<section class="p-8 grid gap-6 lg:grid-cols-3">
+  <!-- Sidebar navigation -->
+  <aside class="border p-4 space-y-4">
+    <div class="h-10 bg-gray-200 flex items-center justify-center">[Ảnh đại diện]</div>
+    <ul class="space-y-2 text-sm">
+      <li class="border p-2">[Thông tin cá nhân]</li>
+      <li class="border p-2">[Đơn đặt chỗ của tôi]</li>
+      <li class="border p-2">[Thanh toán & Ví]</li>
+      <li class="border p-2">[Cài đặt tài khoản]</li>
+    </ul>
+  </aside>
+
+  <!-- Main content -->
+  <div class="lg:col-span-2 border p-6 space-y-6">
+    <!-- Section: Personal Info -->
+    <div class="border p-4">
+      <h2 class="font-bold mb-3">[Thông tin cá nhân]</h2>
+      <form class="space-y-3">
+        <input type="text" placeholder="[Họ và tên]" class="border w-full p-2" />
+        <input type="text" placeholder="[Email]" class="border w-full p-2" />
+        <input type="text" placeholder="[Số điện thoại]" class="border w-full p-2" />
+        <button type="button" class="bg-gray-800 text-white px-4 py-2">[Cập nhật]</button>
+      </form>
+    </div>
+
+    <!-- Section: Bookings -->
+    <div class="border p-4">
+      <h2 class="font-bold mb-3">[Đơn đặt chỗ gần đây]</h2>
+      <div class="border p-3 mb-2">[Booking 1]</div>
+      <div class="border p-3 mb-2">[Booking 2]</div>
+      <div class="border p-3 mb-2">[Booking 3]</div>
+    </div>
+
+    <!-- Section: Wallet -->
+    <div class="border p-4">
+      <h2 class="font-bold mb-3">[Thanh toán & Ví]</h2>
+      <div class="border p-3 mb-2">[Thẻ tín dụng / Ví điện tử]</div>
+      <button class="bg-gray-200 px-4 py-2">[Thêm phương thức]</button>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="border-t p-6 text-center text-sm text-gray-500">
+  <p>[Thông tin bản quyền Luxstay]</p>
+</footer>
+</body>
+</html>
