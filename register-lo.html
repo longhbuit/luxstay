@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>LuxStay – Đăng ký thành viên (Low‑Fi Wireframe)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+<!-- Header -->
+<header class="border-b p-4 flex justify-between items-center">
+    <div class="bg-gray-300 w-10 h-10 flex items-center justify-center">Logo</div>
+    <nav class="hidden md:flex gap-6 text-sm">
+        <span>[Host]</span>
+        <span>[Đăng ký]</span>
+        <span>[Đăng nhập]</span>
+    </nav>
+    <div class="hidden md:flex gap-2">
+        <span class="bg-gray-200 px-3 py-1 rounded">VI</span>
+        <span class="bg-gray-200 px-3 py-1 rounded">VND</span>
+    </div>
+    <button class="md:hidden bg-gray-200 p-2">☰</button>
+</header>
+
+<!-- Hero -->
+<section class="p-8 text-center">
+    <h1 class="text-2xl font-bold">[Tiêu đề trang Đăng ký]</h1>
+    <p class="mt-2 text-gray-500">[Mô tả ngắn gọn về lợi ích đăng ký]</p>
+</section>
+
+<!-- Benefits -->
+<section class="p-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    <div class="border p-4 text-center">[Lợi ích 1]</div>
+    <div class="border p-4 text-center">[Lợi ích 2]</div>
+    <div class="border p-4 text-center">[Lợi ích 3]</div>
+    <div class="border p-4 text-center">[Lợi ích 4]</div>
+</section>
+
+<!-- Register Form -->
+<section class="p-6 grid gap-6 lg:grid-cols-2">
+    <div class="hidden lg:block border h-64 flex items-center justify-center bg-gray-100">[Ảnh minh họa]</div>
+    <div class="border p-6">
+        <h2 class="font-bold mb-4">[Form Đăng ký]</h2>
+        <form class="space-y-4">
+            <input type="text" placeholder="[Email]" class="border w-full p-2"/>
+            <input type="text" placeholder="[Số điện thoại]" class="border w-full p-2"/>
+            <input type="text" placeholder="[Họ và tên]" class="border w-full p-2"/>
+            <input type="password" placeholder="[Mật khẩu]" class="border w-full p-2"/>
+            <input type="password" placeholder="[Nhập lại mật khẩu]" class="border w-full p-2"/>
+            <label class="flex gap-2 text-sm">
+                <input type="checkbox"/> [Chấp nhận điều khoản]
+            </label>
+            <button type="button" class="w-full bg-gray-800 text-white py-2">[Đăng ký]</button>
+            <p class="text-center text-sm">[Liên kết Đăng nhập]</p>
+            <div class="flex gap-2">
+                <button class="flex-1 border py-2">[Facebook]</button>
+                <button class="flex-1 border py-2">[Google]</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="border-t p-6 text-center text-sm text-gray-500">
+    <p>[Thông tin bản quyền Luxstay]</p>
+</footer>
+</body>
+</html>
