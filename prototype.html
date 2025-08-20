@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LuxStay – Đặt phòng homestay, căn hộ & trải nghiệm</title>
+  <meta name="description" content="Đặt chỗ ở, homestay, căn hộ, biệt thự, thuê xe và trải nghiệm – nhanh chóng và thuận tiện." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{--radius:1.25rem}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji"}
+    /* simple container */
+    .container{max-width:1200px}
+  </style>
+</head>
+<body class="bg-white text-slate-900">
+<!-- Top bar -->
+<div class="w-full border-b bg-white/70 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+  <div class="container mx-auto px-4 py-2 flex items-center justify-between text-sm">
+    <div class="flex items-center gap-3">
+      <button class="inline-flex items-center gap-2 px-2 py-1 rounded-full border hover:bg-slate-50" aria-label="Ngôn ngữ">
+        <img alt="VN" src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/vn.svg" class="w-5 h-5 rounded-sm"/>
+        <span>VI</span>
+      </button>
+      <div class="hidden sm:flex items-center gap-2">
+        <span class="text-slate-400">|</span>
+        <span>VND</span>
+      </div>
+    </div>
+    <div class="flex items-center gap-2">
+      <a href="#" class="px-3 py-1.5 rounded-full hover:bg-slate-50">Host</a>
+      <a href="#" class="px-3 py-1.5 rounded-full hover:bg-slate-50">Đăng ký</a>
+      <a href="#" class="px-3 py-1.5 rounded-full bg-slate-900 text-white hover:bg-black">Đăng nhập</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header / Hero -->
+<header class="relative overflow-hidden">
+  <div class="absolute inset-0 -z-10">
+    <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=2000&auto=format&fit=crop" alt="City skyline at dusk" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-black/50"></div>
+  </div>
+  <div class="container mx-auto px-4 py-16 md:py-24 text-white">
+    <h1 class="text-3xl md:text-5xl font-extrabold max-w-3xl leading-tight">Chào mừng đến với LuxStay!</h1>
+    <p class="mt-3 text-lg md:text-xl max-w-2xl opacity-90">Đặt chỗ ở, homestay, cho thuê xe, trải nghiệm và nhiều hơn nữa. Đăng nhập hoặc đăng ký để trải nghiệm ngay.</p>
+
+    <!-- Search card -->
+    <form class="mt-6 bg-white text-slate-900 rounded-2xl shadow-xl p-4 md:p-5 grid grid-cols-1 md:grid-cols-12 gap-3">
+      <div class="md:col-span-5">
+        <label class="text-sm font-medium">Ngày</label>
+        <input type="date" class="mt-1 w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-2 focus:ring-slate-900" />
+      </div>
+      <div class="md:col-span-5">
+        <label class="text-sm font-medium">Số khách</label>
+        <input type="number" min="1" value="2" class="mt-1 w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-2 focus:ring-slate-900" />
+      </div>
+      <div class="md:col-span-2 flex items-end">
+        <button type="submit" class="w-full rounded-xl bg-slate-900 text-white py-3 font-semibold hover:bg-black">Tìm kiếm</button>
+      </div>
+    </form>
+
+    <!-- Shortcuts -->
+    <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3">
+      <a href="#dich-vu" class="group rounded-2xl bg-white/90 backdrop-blur p-4 text-slate-900 shadow hover:shadow-lg transition">
+        <div class="text-xl font-semibold">Homestay</div>
+        <p class="text-sm opacity-70">Căn hộ dịch vụ &amp; Biệt thự</p>
+      </a>
+      <a href="#ve" class="group rounded-2xl bg-white/90 backdrop-blur p-4 text-slate-900 shadow hover:shadow-lg transition">
+        <div class="text-xl font-semibold">Vé tham quan</div>
+        <p class="text-sm opacity-70">Mua vé thật dễ dàng</p>
+      </a>
+      <a href="#xe" class="group rounded-2xl bg-white/90 backdrop-blur p-4 text-slate-900 shadow hover:shadow-lg transition">
+        <div class="text-xl font-semibold">Thuê xe ô tô</div>
+        <p class="text-sm opacity-70">Giá chỉ từ 1,299,000đ</p>
+      </a>
+      <a href="#dua-don" class="group rounded-2xl bg-white/90 backdrop-blur p-4 text-slate-900 shadow hover:shadow-lg transition">
+        <div class="text-xl font-semibold">Đưa đón sân bay</div>
+        <p class="text-sm opacity-70">Xe sang chỉ từ 199,000đ</p>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- Featured Destinations -->
+<section class="container mx-auto px-4 py-12" id="destinations">
+  <div class="mb-6">
+    <h2 class="text-2xl md:text-3xl font-bold">Địa điểm nổi bật</h2>
+    <p class="text-slate-600">Cùng LuxStay bắt đầu chuyến hành trình chinh phục thế giới của bạn</p>
+  </div>
+  <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+    <!-- Card template -->
+    <a class="group relative overflow-hidden rounded-2xl shadow" href="#">
+      <img class="h-44 w-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://images.unsplash.com/photo-1544011776-0eab3d87f7ba?q=80&w=900&auto=format&fit=crop" alt="Hà Nội"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+      <div class="absolute bottom-3 left-3 text-white">
+        <h3 class="font-semibold">Hà Nội</h3>
+        <p class="text-sm opacity-90">3142 chỗ ở</p>
+      </div>
+    </a>
+    <a class="group relative overflow-hidden rounded-2xl shadow" href="#">
+      <img class="h-44 w-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=900&auto=format&fit=crop" alt="TP. Hồ Chí Minh"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+      <div class="absolute bottom-3 left-3 text-white">
+        <h3 class="font-semibold">TP. Hồ Chí Minh</h3>
+        <p class="text-sm opacity-90">3182 chỗ ở</p>
+      </div>
+    </a>
+    <a class="group relative overflow-hidden rounded-2xl shadow" href="#">
+      <img class="h-44 w-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=900&auto=format&fit=crop" alt="Vũng Tàu"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+      <div class="absolute bottom-3 left-3 text-white">
+        <h3 class="font-semibold">Vũng Tàu</h3>
+        <p class="text-sm opacity-90">841 chỗ ở</p>
+      </div>
+    </a>
+    <a class="group relative overflow-hidden rounded-2xl shadow" href="#">
+      <img class="h-44 w-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=900&auto=format&fit=crop" alt="Đà Lạt"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+      <div class="absolute bottom-3 left-3 text-white">
+        <h3 class="font-semibold">Đà Lạt</h3>
+        <p class="text-sm opacity-90">2003 chỗ ở</p>
+      </div>
+    </a>
+    <a class="group relative overflow-hidden rounded-2xl shadow" href="#">
+      <img class="h-44 w-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=900&auto=format&fit=crop" alt="Đà Nẵng"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+      <div class="absolute bottom-3 left-3 text-white">
+        <h3 class="font-semibold">Đà Nẵng</h3>
+        <p class="text-sm opacity-90">1661 chỗ ở</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- City sections (example: Sài Gòn) -->
+<section class="bg-slate-50 py-12" id="sg">
+  <div class="container mx-auto px-4">
+    <div class="flex items-end justify-between gap-4 mb-6">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-bold">Vòng vòng phố thị Sài Gòn</h2>
+        <p class="text-slate-600">Top chỗ ở sạch đẹp, giá tốt cho chuyến đi và công tác của bạn.</p>
+      </div>
+      <a href="#" class="hidden sm:inline-block px-4 py-2 rounded-xl border hover:bg-white">Xem thêm</a>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <!-- 4 themed cards -->
+      <article class="rounded-2xl overflow-hidden border bg-white shadow-sm">
+        <img src="https://images.unsplash.com/photo-1505764706515-aa95265c5abc?q=80&w=1200&auto=format&fit=crop" alt="Gần trung tâm" class="h-44 w-full object-cover" />
+        <div class="p-4">
+          <h3 class="font-semibold">Gần trung tâm!</h3>
+          <p class="text-sm text-slate-600">Dễ dàng di chuyển khắp nơi với top chỗ ở khu vực trung tâm.</p>
+        </div>
+      </article>
+      <article class="rounded-2xl overflow-hidden border bg-white shadow-sm">
+        <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1200&auto=format&fit=crop" alt="Dành cho cặp đôi" class="h-44 w-full object-cover" />
+        <div class="p-4">
+          <h3 class="font-semibold">Dành cho cặp đôi</h3>
+          <p class="text-sm text-slate-600">Không gian lãng mạn và ngọt ngào giữa Sài Gòn hoa lệ.</p>
+        </div>
+      </article>
+      <article class="rounded-2xl overflow-hidden border bg-white shadow-sm">
+        <img src="https://images.unsplash.com/photo-1496412705862-e0088f16f791?q=80&w=1200&auto=format&fit=crop" alt="Giá tốt chọn ngay" class="h-44 w-full object-cover" />
+        <div class="p-4">
+          <h3 class="font-semibold">Giá tốt chọn ngay!</h3>
+          <p class="text-sm text-slate-600">Trải nghiệm không gian tiện nghi với mức giá khó tin.</p>
+        </div>
+      </article>
+      <article class="rounded-2xl overflow-hidden border bg-white shadow-sm">
+        <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1200&auto=format&fit=crop" alt="Triệu view sống ảo" class="h-44 w-full object-cover" />
+        <div class="p-4">
+          <h3 class="font-semibold">Triệu view sống ảo</h3>
+          <p class="text-sm text-slate-600">Top homestay bạn không thể bỏ lỡ để có tấm ảnh cực xịn.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Another example block (Vũng Tàu) -->
+<section class="py-12" id="vt">
+  <div class="container mx-auto px-4">
+    <h2 class="text-2xl md:text-3xl font-bold mb-6">Lượn quanh biển lớn Vũng Tàu</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <!-- reusing same card structure with other images -->
+      <article class="rounded-2xl overflow-hidden border bg-white shadow-sm">
+        <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=1200&auto=format&fit=crop" alt="Gần trung tâm" class="h-44 w-full object-cover" />
+        <div class="p-4"><h3 class="font-semibold">Gần trung tâm!</h3><p class="text-sm text-slate-600">Di chuyển dễ dàng khắp thành phố biển.</p></div>
+      </article>
+      <article class="rounded-2xl overflow-hidden border bg-white shadow-sm">
+        <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?q=80&w=1200&auto=format&fit=crop" alt="Cặp đôi" class="h-44 w-full object-cover" />
+        <div class="p-4"><h3 class="font-semibold">Dành cho cặp đôi</h3><p class="text-sm text-slate-600">Không gian lãng mạn, chill bên biển.</p></div>
+      </article>
+      <article class="rounded-2xl overflow-hidden border bg-white shadow-sm">
+        <img src="https://images.unsplash.com/photo-1541123356219-284ebe98ae3a?q=80&w=1200&auto=format&fit=crop" alt="Giá tốt" class="h-44 w-full object-cover" />
+        <div class="p-4"><h3 class="font-semibold">Giá tốt chọn ngay!</h3><p class="text-sm text-slate-600">Ưu đãi độc quyền, số lượng có hạn.</p></div>
+      </article>
+      <article class="rounded-2xl overflow-hidden border bg-white shadow-sm">
+        <img src="https://images.unsplash.com/photo-1542317853-0ac2c93e14b6?q=80&w=1200&auto=format&fit=crop" alt="Sống ảo" class="h-44 w-full object-cover" />
+        <div class="p-4"><h3 class="font-semibold">Triệu view sống ảo</h3><p class="text-sm text-slate-600">Góc chụp triệu like dành cho bạn.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Guide thumbnails -->
+<section class="bg-slate-50 py-12" id="huong-dan">
+  <div class="container mx-auto px-4">
+    <h2 class="text-2xl md:text-3xl font-bold mb-6">Hướng dẫn sử dụng</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+      <img class="rounded-xl border" src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=600&auto=format&fit=crop" alt="Bước 1" />
+      <img class="rounded-xl border" src="https://images.unsplash.com/photo-1519337265831-281ec6cc8514?q=80&w=600&auto=format&fit=crop" alt="Bước 2" />
+      <img class="rounded-xl border" src="https://images.unsplash.com/photo-1521295121783-8a321d551ad2?q=80&w=600&auto=format&fit=crop" alt="Bước 3" />
+      <img class="rounded-xl border" src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=600&auto=format&fit=crop" alt="Bước 4" />
+      <img class="rounded-xl border" src="https://images.unsplash.com/photo-1454165205744-3b78555e5572?q=80&w=600&auto=format&fit=crop" alt="Bước 5" />
+    </div>
+  </div>
+</section>
+
+<!-- App + QR section -->
+<section class="py-12" id="app">
+  <div class="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+    <div>
+      <h2 class="text-2xl md:text-3xl font-bold">Tìm kiếm chỗ ở giá tốt nhất</h2>
+      <p class="mt-2 text-slate-600">LuxStay là nền tảng đặt phòng trực tuyến #1 Việt Nam*. Đồng hành cùng chúng tôi để mỗi chuyến đi là hành trình truyền cảm hứng.</p>
+      <div class="mt-4 flex items-center gap-3">
+        <img class="h-28 w-28 rounded-xl border p-2" alt="QR code" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A%2F%2Fluxstay.app" />
+        <div class="flex flex-col gap-3">
+          <a class="inline-block" href="#"><img alt="App Store" class="h-10" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"/></a>
+          <a class="inline-block" href="#"><img alt="Google Play" class="h-10" src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"/></a>
+        </div>
+      </div>
+    </div>
+    <div class="relative">
+      <img class="rounded-2xl shadow-2xl border" src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?q=80&w=1600&auto=format&fit=crop" alt="App preview mock" />
+      <div class="absolute -bottom-4 -right-4 bg-white rounded-2xl shadow p-4">
+        <div class="text-xs text-slate-500">*Slogan minh hoạ</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-slate-900 text-slate-200 pt-12">
+  <div class="container mx-auto px-4 grid md:grid-cols-4 gap-8">
+    <div>
+      <h3 class="font-semibold mb-3">TOP HOMESTAY ĐƯỢC YÊU THÍCH</h3>
+      <ul class="space-y-2 text-slate-300 text-sm">
+        <li><a href="#" class="hover:underline">Homestay Đà Lạt</a></li>
+        <li><a href="#" class="hover:underline">Homestay Hà Nội</a></li>
+        <li><a href="#" class="hover:underline">Homestay Hồ Chí Minh</a></li>
+        <li><a href="#" class="hover:underline">Homestay Vũng Tàu</a></li>
+        <li><a href="#" class="hover:underline">Homestay Đà Nẵng</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-semibold mb-3">KHÔNG GIAN ƯA THÍCH</h3>
+      <ul class="space-y-2 text-slate-300 text-sm">
+        <li><a href="#" class="hover:underline">Căn hộ dịch vụ</a></li>
+        <li><a href="#" class="hover:underline">Biệt thự</a></li>
+        <li><a href="#" class="hover:underline">Nhà riêng</a></li>
+        <li><a href="#" class="hover:underline">Studio</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-semibold mb-3">VỀ CHÚNG TÔI</h3>
+      <ul class="space-y-2 text-slate-300 text-sm">
+        <li><a href="#" class="hover:underline">Blog</a></li>
+        <li><a href="#" class="hover:underline">Điều khoản hoạt động</a></li>
+        <li><a href="#" class="hover:underline">Cơ hội nghề nghiệp</a></li>
+        <li><a href="#" class="hover:underline">Trang dành cho chủ nhà</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-semibold mb-3">TẢI ỨNG DỤNG</h3>
+      <div class="flex items-center gap-3">
+        <img class="h-24 w-24 rounded-lg border p-2" src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https%3A%2F%2Fluxstay.app" alt="QR" />
+        <div class="flex flex-col gap-3">
+          <a class="inline-block" href="#"><img alt="App Store" class="h-10" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"/></a>
+          <a class="inline-block" href="#"><img alt="Google Play" class="h-10" src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"/></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mt-10 border-t border-slate-800"></div>
+  <div class="container mx-auto px-4 py-6 text-sm flex flex-col md:flex-row items-center justify-between gap-4">
+    <div>© 2025 LuxStay (bản dựng mẫu). Không sử dụng cho mục đích thương mại.</div>
+    <div class="flex items-center gap-4 opacity-80">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" class="h-6" alt="Visa"/>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Mastercard-logo.png" class="h-6" alt="Mastercard"/>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Maestro_2016.svg" class="h-6" alt="Maestro"/>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // (Optional) Prevent default submit for demo
+  document.querySelector('form')?.addEventListener('submit', function(e){
+    e.preventDefault();
+    alert('Demo tìm kiếm! Bạn có thể kết nối API sau.');
+  })
+</script>
+</body>
+</html>

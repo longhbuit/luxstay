@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LuxStay – Low‑Fi Wireframe</title>
+    <meta name="description" content="Low‑fi wireframe dạng xám/khung, bám bố cục trang LuxStay." />
+    <style>
+        :root{
+            --bg:#fafafa; --ink:#222; --muted:#6b7280; --line:#d1d5db; --card:#ffffff; --radius:14px
+        }
+        *{box-sizing:border-box}
+        html{scroll-behavior:smooth}
+        body{margin:0; font-family: ui-sans-serif, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial; color:var(--ink); background:var(--bg)}
+        .container{max-width:1200px; margin-inline:auto; padding-inline:16px}
+        .stack{display:flex; gap:12px; align-items:center}
+        .between{display:flex; justify-content:space-between; align-items:center}
+        .section{padding:48px 0}
+        .hr{height:1px; background:var(--line)}
+
+        /* Low‑fi atoms */
+        .btn{padding:10px 14px; border:1px solid var(--ink); border-radius:999px; background:#fff}
+        .btn.dark{background:#111; color:#fff; border-color:#111}
+        .chip{padding:6px 10px; border:1px solid var(--ink); border-radius:999px}
+
+        .card{background:var(--card); border:2px solid var(--ink); border-radius:var(--radius); box-shadow:4px 4px 0 #00000010}
+        .pad{padding:16px}
+
+        .imgph{position:relative; background:repeating-linear-gradient(45deg,#eee,#eee 12px,#f7f7f7 12px,#f7f7f7 24px); border:2px dashed var(--muted); border-radius:var(--radius)}
+        .imgph::before, .imgph::after{content:""; position:absolute; inset:auto;}
+        .imgph::before{left:8%; right:8%; top:8%; bottom:8%; border:1px solid var(--muted); border-radius:10px}
+        .imgph::after{left:12%; right:12%; top:50%; height:1px; background:var(--muted)}
+
+        .label{font-size:12px; color:var(--muted); letter-spacing:.02em}
+        h1,h2,h3{margin:0}
+        h1{font-size:32px}
+        h2{font-size:24px}
+        h3{font-size:18px}
+        p{margin:8px 0 0; color:#444}
+
+        .grid{display:grid; gap:16px}
+        .g-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+        .g-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+        .g-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+        .g-5{grid-template-columns:repeat(5,minmax(0,1fr))}
+
+        @media (max-width:1024px){.g-4{grid-template-columns:repeat(2,1fr)} .g-5{grid-template-columns:repeat(3,1fr)}}
+        @media (max-width:640px){.g-2,.g-3,.g-4,.g-5{grid-template-columns:repeat(2,1fr)}}
+
+        .hero{position:relative; padding:64px 0; color:#111}
+        .hero .imgph{position:absolute; inset:0; border-radius:0; border:none; opacity:.35}
+        .hero .overlay{position:absolute; inset:0; background:linear-gradient(0deg,#00000020,transparent)}
+
+        /* Inputs (low‑fi) */
+        .input{display:flex; align-items:center; gap:8px; border:2px solid var(--ink); border-radius:12px; padding:10px 12px; background:#fff}
+        .input .dot{width:10px; height:10px; border-radius:50%; background:#bbb}
+        .search-grid{display:grid; gap:12px; grid-template-columns:2fr 2fr 1fr}
+        @media(max-width:768px){.search-grid{grid-template-columns:1fr}}
+
+        .footer{background:#111; color:#e5e7eb; padding-top:48px}
+        .footer ul{list-style:none; margin:0; padding:0}
+        .footer li{padding:4px 0}
+
+        /* Utility */
+        .mt8{margin-top:8px} .mt12{margin-top:12px} .mt16{margin-top:16px} .mt24{margin-top:24px}
+        .h-44{height:176px} .h-28{height:112px} .h-64{height:256px}
+    </style>
+</head>
+<body>
+<!-- Top bar -->
+<div style="background:#fff; border-bottom:2px solid var(--ink)">
+    <div class="container pad between" style="padding-block:10px">
+        <div class="stack">
+            <div class="chip">VI</div>
+            <span class="label">VND</span>
+        </div>
+        <div class="stack">
+            <button class="btn">Host</button>
+            <button class="btn">Đăng ký</button>
+            <button class="btn dark">Đăng nhập</button>
+        </div>
+    </div>
+</div>
+
+<!-- Hero -->
+<header class="hero">
+    <div class="imgph" aria-hidden="true"></div>
+    <div class="overlay" aria-hidden="true"></div>
+
+    <div class="container" style="position:relative">
+        <h1>Chào mừng đến với LuxStay!</h1>
+        <p class="mt8 label">(Tiêu đề chính – mô tả ngắn đặt chỗ ở, homestay, trải nghiệm…)</p>
+
+        <!-- Search card -->
+        <div class="card pad mt16">
+            <div class="label">Tìm kiếm</div>
+            <div class="search-grid mt12">
+                <div class="input"><div class="dot"></div><span class="label">Ngày</span></div>
+                <div class="input"><div class="dot"></div><span class="label">Số khách</span></div>
+                <button class="btn dark" style="width:100%">Tìm kiếm</button>
+            </div>
+        </div>
+
+        <!-- Shortcuts -->
+        <div class="grid g-4 mt16">
+            <div class="card pad">
+                <div class="label">Shortcut</div>
+                <h3>Homestay</h3>
+                <p class="label">Căn hộ, biệt thự…</p>
+            </div>
+            <div class="card pad"><div class="label">Shortcut</div><h3>Vé tham quan</h3><p class="label">Mua vé dễ dàng</p></div>
+            <div class="card pad"><div class="label">Shortcut</div><h3>Thuê xe ô tô</h3><p class="label">Từ 1.299.000đ</p></div>
+            <div class="card pad"><div class="label">Shortcut</div><h3>Đưa đón sân bay</h3><p class="label">Từ 199.000đ</p></div>
+        </div>
+    </div>
+</header>
+
+<!-- Destinations -->
+<section class="section">
+    <div class="container">
+        <h2>Địa điểm nổi bật</h2>
+        <p class="label mt8">(Subcopy giới thiệu danh mục địa điểm)</p>
+        <div class="grid g-5 mt16">
+            <div class="card">
+                <div class="imgph h-44"></div>
+                <div class="pad">
+                    <div class="label">Hà Nội</div>
+                    <div class="label">3142 chỗ ở</div>
+                </div>
+            </div>
+            <div class="card"><div class="imgph h-44"></div><div class="pad"><div class="label">TP. HCM</div><div class="label">3182 chỗ ở</div></div></div>
+            <div class="card"><div class="imgph h-44"></div><div class="pad"><div class="label">Vũng Tàu</div><div class="label">841 chỗ ở</div></div></div>
+            <div class="card"><div class="imgph h-44"></div><div class="pad"><div class="label">Đà Lạt</div><div class="label">2003 chỗ ở</div></div></div>
+            <div class="card"><div class="imgph h-44"></div><div class="pad"><div class="label">Đà Nẵng</div><div class="label">1661 chỗ ở</div></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- SG section -->
+<section class="section" style="background:#f3f4f6">
+    <div class="container">
+        <div class="between">
+            <div>
+                <h2>Vòng vòng phố thị Sài Gòn</h2>
+                <p class="label mt8">(Subcopy mô tả nhóm thẻ)</p>
+            </div>
+            <button class="btn">Xem thêm</button>
+        </div>
+        <div class="grid g-4 mt16">
+            <article class="card"><div class="imgph h-44"></div><div class="pad"><h3>Gần trung tâm!</h3><p class="label">Mô tả ngắn…</p></div></article>
+            <article class="card"><div class="imgph h-44"></div><div class="pad"><h3>Dành cho cặp đôi</h3><p class="label">Mô tả ngắn…</p></div></article>
+            <article class="card"><div class="imgph h-44"></div><div class="pad"><h3>Giá tốt chọn ngay!</h3><p class="label">Mô tả ngắn…</p></div></article>
+            <article class="card"><div class="imgph h-44"></div><div class="pad"><h3>Triệu view sống ảo</h3><p class="label">Mô tả ngắn…</p></div></article>
+        </div>
+    </div>
+</section>
+
+<!-- VT section -->
+<section class="section">
+    <div class="container">
+        <h2>Lượn quanh biển lớn Vũng Tàu</h2>
+        <div class="grid g-4 mt16">
+            <article class="card"><div class="imgph h-44"></div><div class="pad"><h3>Gần trung tâm!</h3><p class="label">Mô tả ngắn…</p></div></article>
+            <article class="card"><div class="imgph h-44"></div><div class="pad"><h3>Dành cho cặp đôi</h3><p class="label">Mô tả ngắn…</p></div></article>
+            <article class="card"><div class="imgph h-44"></div><div class="pad"><h3>Giá tốt chọn ngay!</h3><p class="label">Mô tả ngắn…</p></div></article>
+            <article class="card"><div class="imgph h-44"></div><div class="pad"><h3>Triệu view sống ảo</h3><p class="label">Mô tả ngắn…</p></div></article>
+        </div>
+    </div>
+</section>
+
+<!-- Guide thumbnails -->
+<section class="section" style="background:#f3f4f6">
+    <div class="container">
+        <h2>Hướng dẫn sử dụng</h2>
+        <div class="grid g-5 mt16">
+            <div class="imgph h-28"></div>
+            <div class="imgph h-28"></div>
+            <div class="imgph h-28"></div>
+            <div class="imgph h-28"></div>
+            <div class="imgph h-28"></div>
+        </div>
+    </div>
+</section>
+
+<!-- App + QR -->
+<section class="section">
+    <div class="container" style="display:grid; gap:24px; grid-template-columns:1.3fr 1fr">
+        <div>
+            <h2>Tìm kiếm chỗ ở giá tốt nhất</h2>
+            <p class="label mt8">(Copy giới thiệu app + CTA)</p>
+            <div class="stack mt16">
+                <div class="imgph" style="width:112px; height:112px; border-radius:12px"></div>
+                <div class="stack" style="flex-direction:column; align-items:flex-start">
+                    <div class="imgph" style="width:160px; height:40px; border-radius:8px"></div>
+                    <div class="imgph" style="width:160px; height:40px; border-radius:8px"></div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="imgph h-64" style="border-radius:var(--radius)"></div>
+            <div class="label mt8">*Slogan minh hoạ</div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container" style="display:grid; gap:24px; grid-template-columns:repeat(4,1fr)">
+        <div>
+            <div class="label">TOP HOMESTAY</div>
+            <ul class="mt12">
+                <li class="label">Đà Lạt</li>
+                <li class="label">Hà Nội</li>
+                <li class="label">Hồ Chí Minh</li>
+                <li class="label">Vũng Tàu</li>
+                <li class="label">Đà Nẵng</li>
+            </ul>
+        </div>
+        <div>
+            <div class="label">KHÔNG GIAN</div>
+            <ul class="mt12">
+                <li class="label">Căn hộ dịch vụ</li>
+                <li class="label">Biệt thự</li>
+                <li class="label">Nhà riêng</li>
+                <li class="label">Studio</li>
+            </ul>
+        </div>
+        <div>
+            <div class="label">VỀ CHÚNG TÔI</div>
+            <ul class="mt12">
+                <li class="label">Blog</li>
+                <li class="label">Điều khoản</li>
+                <li class="label">Nghề nghiệp</li>
+                <li class="label">Chủ nhà</li>
+            </ul>
+        </div>
+        <div>
+            <div class="label">TẢI ỨNG DỤNG</div>
+            <div class="stack mt12">
+                <div class="imgph" style="width:96px; height:96px; border-radius:10px"></div>
+                <div class="stack" style="flex-direction:column; align-items:flex-start">
+                    <div class="imgph" style="width:160px; height:40px; border-radius:8px"></div>
+                    <div class="imgph" style="width:160px; height:40px; border-radius:8px"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hr" style="margin-top:24px"></div>
+    <div class="container" style="padding:16px 0; display:flex; gap:16px; justify-content:space-between; align-items:center">
+        <div class="label">© 2025 LuxStay (wireframe). Không dùng cho mục đích thương mại.</div>
+        <div class="stack">
+            <div class="imgph" style="width:56px; height:24px; border-radius:6px"></div>
+            <div class="imgph" style="width:64px; height:24px; border-radius:6px"></div>
+            <div class="imgph" style="width:64px; height:24px; border-radius:6px"></div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
